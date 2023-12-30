@@ -1,0 +1,109 @@
+ css : 선택자(selector)
+        header>.header__container>.header>h1+nav
+        
+        css : 유교적
+         5형제 
+         1형+동생(2동생)
+         3형+동생(4동생)
+
+         2동생+1형 : 문법적으로 오류는 없지만 동작 하지 않음
+         // javascript 서양적 
+
+         1형~동생(2,3,4,5동생 모두)
+         3형~동생(4,5동생 모두)
+            (~ 틸드)
+         `(백틱==백어포스트로피)
+         ''(작은따옴표)
+         "" (큰따옴표)
+         , (쉼표)
+
+
+          header>.header__container>.header>h1+nav
+
+
+          sprite이미지 만들어주는 사이트
+          https://www.toptal.com/developers/css/sprite-generator
+     -->
+<!-- 
+  네트리파이 : backend 단이 없는 페이지를 배포
+  codepen : 회원가입
+
+  협업을 위한 end : git 버전관리(형상관리) 툴
+  클라우드 기술 : 리눅스, 클라우드(aws)
+
+  github : 장점 무료시스템 존재
+  gitlab, gitbutkit ....
+
+
+  github -> gitpages
+  툴 : text, gui
+
+
+  shell : cmd, powershell, zsh(터미널)
+  목록 보기 : ls 
+  드라이브, 폴더 변경  : cd  경로
+
+  cd c:
+  cd d:
+  cd my-app
+  PS D:\my-app\src> cd ..
+  PS D:\my-app> cd ..
+  PS D:\> cd ..
+  PS D:\> cd my-app\src
+  PS D:\my-app\src> cd ../..
+  PS D:\>
+
+  PS D:\merryFront> md  test02
+  PS D:\merryFront> rm test01
+
+  $ mkdir myApp
+  $ rm -r myApp
+ 
+  터미널 창 열기 : ctrl + `(백틱)
+  
+ITSC@DESKTOP-PMHM7D7 MINGW64 /e/주말_frontend_3
+$ cd day02_1224
+
+ITSC@DESKTOP-PMHM7D7 MINGW64 /e/주말_frontend_3/day02_1224
+$ cd ..
+
+ITSC@DESKTOP-PMHM7D7 MINGW64 /e/주말_frontend_3
+$ mkdir day03_1231
+
+ITSC@DESKTOP-PMHM7D7 MINGW64 /e/주말_frontend_3
+$ ls
+ day01_1223/   day02_1224/   day03_1231/   styles/  '주말_frontend_3 (2).zip'   주말_frontend_3.zip
+
+ITSC@DESKTOP-PMHM7D7 MINGW64 /e/주말_frontend_3
+$ rm -r day03_1231
+
+ITSC@DESKTOP-PMHM7D7 MINGW64 /e/주말_frontend_3
+$
+
+리파지토리 : 온라인상 폴더
+
+파일 만들기
+git init
+
+// usb 사용하고 있다면 
+// git config --global --add safe.directory 'E:/주말_frontend_3/day02_1224'
+
+git add . 형상(버전)관리할 파일 설정
+
+//  git config --global user.email "you@example.com"
+//  git config --global user.name "Your Name"
+//  git config --list : 사용자 정보를 확인 가능 
+//  편집창들어가는데 빠져나오기 ESC > :q
+
+git commit -m "first commit" 
+
+// git log : commit 상태 확인
+
+git branch -M master
+git remote add origin https://github.com/jemicom/aFirst.git
+git push -u origin master
+
+
+//  git config  --unset --global --add safe.directory 
+//  git config --unset --global user.email 
+//  git config --unset --global user.name  

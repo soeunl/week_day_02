@@ -1,0 +1,425 @@
+/* moblie first */
+/* moblie first에서 너비를 지정해야 할 일은 없다 */
+/* shift 와 tab을 누르면 줄정리됨 */
+header{
+background-color: antiquewhite;
+height: 200px;
+/* display: flex;
+align-items: center; */
+box-sizing: border-box;
+background-image: url(./images/visual.jpg);
+background-position: center top;
+background-size: cover;
+}
+
+.header{
+display: flex;
+justify-content: space-between;
+height: 100%;
+align-items: center;
+background-color: white;
+}
+
+/* .header_container{
+width: 100%;
+} */
+
+h1{
+width: 100px;
+margin-right: auto;
+margin-left: auto;
+}
+
+.lnb{
+position: fixed;
+top: -500px;
+width: 100%;
+}
+
+.lnb ul{
+display: flex;
+flex-direction: column;
+gap: 5px;
+align-items: flex-start;
+background-color: white;
+padding-left: 30px;
+}
+
+.lnb a{
+display: flex;
+line-height: 40px;
+padding-top: 10px;
+}
+
+.lnb span{
+display: block;
+height: 30px;
+width: 30px;
+margin: auto;
+margin-right: 20px;
+background-image: url(./images/icon_sprites.png);
+}
+
+.lnb li:nth-child(1) span{
+background-position: -63px -65px;
+}
+
+.lnb li:nth-child(2) span{
+background-position: -10px -117px;
+}
+
+.lnb li:nth-child(3) span{
+background-position: -60px -117px;
+}
+
+.lnb li:nth-child(4) span{
+background-position: -106px -117px;
+}
+
+.bars:hover~ .lnb{
+top: 60px;
+}
+
+section{display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 10px;
+}
+
+.content01,
+.content02,
+.content03{
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 10px;
+padding: 20px 0;
+}
+.content01{
+background-color: greenyellow;
+}
+.content02{
+background-color: green;
+}
+.content03{
+background-color: skyblue;
+}
+
+.content01 .icon,
+.content02 span,
+.content03 span{
+display: block;
+width: 40px;
+height: 40px;
+background-image: url(./images/icon_sprites.png);
+}
+
+.content01 .icon{
+background-position: -63px -10px;
+}
+.content02 span{
+background-position: -116px -10px;
+}
+.content03 .span{
+background-position: -10px -65px;
+}
+
+.content01 button,
+.content02 button,
+.content03 button{
+padding: 5px;
+border-radius: 5px;
+}
+
+.content04,
+.content05,
+.content09{
+display: none;
+}
+
+.content06{
+grid-column: span 3;
+/* 현재의 위치에서 3개 써라 */
+border: 1px solid orange;
+height: 200px;
+}
+.content06>.items{
+height: 100%;
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(2, 1fr);
+}
+.content06 .item{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+
+.content07{
+height: 250px;
+}
+
+.content08{
+grid-column: -1/-2;
+text-align: right;
+position: relative;
+}
+
+.content07 > div,
+.content08 > div{
+width: 152%;
+height: 100%;
+border-radius: 10px;
+}
+
+.content08 > div{
+position: absolute;
+right: 0;
+background-image: url(./images/02사이버홍보관.png);
+}
+
+.content07 > div{
+background-image: url(./images/04건강보험웹진.png);
+border-radius: 10px;
+}
+
+.different{
+background-color: rgb(202, 237, 251);
+border-top: 1px solid skyblue;
+padding: 50px 0;
+}
+
+.different__content{
+display: grid;
+gap: 10px;
+grid-template-rows: repeat(4, 200px);
+grid-template-columns: 0.7fr;
+justify-content: center;
+}
+
+.different__content>div{
+background-color: antiquewhite;
+}
+
+footer{
+background-color: rgb(49, 43, 43);
+color: white;
+padding: 50 0px;
+}
+
+.footer_sitemap{
+display: none;
+}
+
+#select{
+display: none;
+padding: 10px;
+}
+
+@media screen and (min-width:641px) {
+header{
+height: 350px;
+}
+.content05{
+display: block;
+}
+.content06{
+grid-column: span 2;
+}
+.content07 > div,
+.content08 > div{
+background-repeat: no-repeat;
+background-size: cover;
+}
+.content09{
+display: flex;
+grid-column: span 3;
+justify-content: space-between;
+gap: 10px;
+}
+.content09 img{
+width: 100%;
+}
+.content09 > div{
+border: 1px solid black;
+}
+.content09> div:nth-child(4) ~ div{
+display: none;
+}
+.different__content{
+grid-template-columns: repeat(2, 40%);
+grid-template-rows: 200px 200px;
+}
+.footer_address {
+display: flex;
+align-items: center;
+}
+#select{
+display: block;
+padding: 10px;
+}
+}
+
+@media screen and (min-width:1201px) {
+.header{
+width: 1200px;
+justify-content: space-between;
+margin: auto;
+padding: 0 20px;
+} 
+header{
+height: 500px;
+}
+.lnb{
+position: static;
+/* top 속성이 사라지고 */
+width: 800px;
+}
+h1{
+margin: 0;}
+.lnb>ul{
+/* width: 800px; */
+flex-direction: row;
+justify-content: space-between;
+}
+.bars{
+display: none;
+}
+.lnb a{
+flex-direction: column;
+line-height: 40px;
+padding-top: 10px;
+}
+section{
+width: 1200px;
+margin: auto;
+grid-template-columns: repeat(3, 210px) 250px 250px;
+}
+.content04{
+display: block;
+grid-column: span 2;
+height: 200px;
+/* grid flex는 형제들간 너비, 높이를 맞춤 */
+background-color: #ffe200;
+border-radius: 50px 20px 20px 20px;
+position: relative;
+overflow: hidden;
+/* box-shadow: 20px 0 0 -10px yellow; */
+}
+.content04>.circle{
+width: 100px;
+height: 100px;
+border-radius: 100px;
+background-color: rgba(255, 255, 0, 0.503);
+position: absolute;
+right: 100px;
+top: 20px;
+z-index: 2;
+}
+.content04>.shadow{
+width: 100%;
+height: 100%;
+background-color: #ffee00eb;
+position: absolute;
+transform: translateX(-20px);
+border-radius: 20px;
+z-index: 1;
+}
+.content04::after{
+content: "";
+display: block;
+width: 200px;
+height: 200px;
+border-radius: 200px;
+background-image: linear-gradient(320deg, yellow, transparent);
+position: absolute;
+top: 70px;
+left: 300px;
+z-index: 2;
+}
+.content04::before{
+content: "";
+display: block;
+width: 200px;
+height: 200px;
+border-radius: 200px;
+background-image: linear-gradient(90deg, yellow, transparent);
+position: absolute;
+top: -70px;
+left: -60px;
+z-index: 2;
+}
+.importnat{
+position: absolute;
+z-index: 3;
+width: 100%;
+padding: 20px 50px;
+height: 100%;
+
+}.arrow_box {
+position: relative;
+background: #88b7d5;
+bottom: 0;
+border-radius: 5px;
+display: none;
+}
+.arrow_box:after {
+top: 100%;
+left: 50%;
+border: solid transparent;
+content: "";
+height: 0;
+width: 0;
+position: absolute;
+pointer-events: none;
+border-color: rgba(136, 183, 213, 0);
+border-top-color: #88b7d5;
+border-width: 10px;
+margin-left: -10px;
+}
+.importnat:hover>.arrow_box{
+display: block;
+}
+/* javascript로 구조 하나에 텍스트를 변경하고 위치 바꿔서 배치할 수 있음 */
+.content07 > div,
+.content08 > div{
+width: 100%;
+}
+.content09{
+grid-column: span 5;
+}
+.content09> div:nth-child(4) ~ div{
+display: block;
+}
+.different__container{
+width: 1200px;
+margin: auto;
+}
+.different__content{
+grid-template-columns: repeat(4, 1fr);
+grid-template-rows: 200px
+}
+.footer_sitemap{
+width: 1200px;
+margin: auto;
+display: flex;
+justify-content: space-between;
+margin-bottom: 50px;
+}
+.line{
+border-top: 1px solid gray;
+}
+.footer_address{
+width: 1200px;
+margin: auto;
+padding-top: 50px;
+}
+#select{
+margin-left: auto;
+padding: 10px;
+/* option 디자인 적용 불가.
+    다른 태그로 select 처럼 구현해야 함.
+    js 필요 */
+}
+}
